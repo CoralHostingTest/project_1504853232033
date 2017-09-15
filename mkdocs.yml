@@ -1,0 +1,19 @@
+site_name: Test Project
+pages:
+    - "Getting Started": index.md
+    - "Documents":
+        - "test": test.md
+        - "Swagger UI": apex_reserved_swaggerui.md
+    - "Foo xxx":
+        - "Foo 1": Foo_1.md
+        - "Foo 3": Foo_3.md
+    - "Other links":
+        - "Copyright": copyright.md
+theme: readthedocs
+theme_dir: theme
+markdown_extensions:
+    - admonition
+    - def_list
+    - grid_tables
+extra:
+    portalHostName: "https://apex.corp.yahoo.com"

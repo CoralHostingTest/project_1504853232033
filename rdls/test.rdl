@@ -1,0 +1,138 @@
+namespace com.yahoo.apex.parsec;
+name apex;
+version 1;
+
+
+// e.g.2013-03-06T11:00:00Z
+type DateTime String
+
+type ProjectRequest struct {
+    String repoUrl (x_not_null, x_size="max=256") ;
+    String custodian (x_not_null, x_size="max=256");
+    String description (x_not_null, x_size="max=512");
+}
+
+type ProjectResponse struct {
+    UUID id;
+    String name;
+    String repoUrl;
+    String custodian;
+    String description;
+    DateTime repo_update_time;
+    String repo_head_sha;
+    DateTime doc_generated_time;
+    String doc_url;
+    String review_url;
+    String splunk_dashboard_url;
+    String test_host_url;
+}
+
+type OAuthData struct {
+    String code;
+    String state;
+}
+
+type NullResponse struct {
+}
+
+resource ProjectResponse POST "/projects/" (name=createProject) {
+    ProjectRequest creationRequest (x_must_validate);
+
+    String wssid (header="X-YahooWSSID-Authorization")
+
+    authenticate;
+    expected ACCEPTED;
+    exceptions {
+        ResourceError INTERNAL_SERVER_ERROR;
+        ResourceError BAD_REQUEST;
+        ResourceError CONFLICT;
+        ResourceError UNAUTHORIZED;
+        ResourceError FORBIDDEN;
+    }
+}
+
+resource ProjectResponse PUT "/projects/{id}" (name=updateProject) {
+    UUID id;
+    ProjectRequest project (x_must_validate);
+
+    String wssid (header="X-YahooWSSID-Authorization")
+
+    authenticate;
+
+    expected OK;
+    exceptions {
+        ResourceError INTERNAL_SERVER_ERROR;
+        ResourceError BAD_REQUEST;
+        ResourceError CONFLICT;
+        ResourceError UNAUTHORIZED;
+        ResourceError FORBIDDEN;
+        ResourceError NOT_FOUND;
+    }
+}
+
+resource ProjectResponse GET "/projects/{id}" {
+    UUID id;
+
+    expected OK;
+    exceptions {
+        ResourceError INTERNAL_SERVER_ERROR;
+        ResourceError BAD_REQUEST;
+        ResourceError UNAUTHORIZED;
+        ResourceError NOT_FOUND;
+    }
+}
+
+resource NullResponse POST "/oAuthTokens" (name=createOAuthToken) {
+    OAuthData oAuthData;
+
+    String wssid (header="X-YahooWSSID-Authorization")
+
+    authenticate;
+
+    expected NO_CONTENT;
+    exceptions {
+        ResourceError INTERNAL_SERVER_ERROR;
+        ResourceError BAD_REQUEST;
+        ResourceError UNAUTHORIZED;
+        ResourceError FORBIDDEN;
+    }
+}
+
+/*
+resource NullResponse POST "/projects/{id}/genDocs" {
+    async;
+    UUID id;
+    
+    String wssid (header="X-YahooWSSID-Authorization")
+
+    expected ACCEPTED;
+    exceptions {
+        ResourceError INTERNAL_SERVER_ERROR;
+        ResourceError CONFLICT;
+        ResourceError BAD_REQUEST;
+        ResourceError UNAUTHORIZED;
+        ResourceError NOT_FOUND;
+    }
+
+}
+
+resource NullResponse POST "/projects/{id}/sync" {
+    async;
+    UUID id;
+
+    String wssid (header="X-YahooWSSID-Authorization")
+
+    authenticate;
+
+    expected ACCEPTED;
+    exceptions {
+        ResourceError INTERNAL_SERVER_ERROR;
+        ResourceError CONFLICT;
+        ResourceError BAD_REQUEST;
+        ResourceError UNAUTHORIZED;
+        ResourceError NOT_FOUND;
+    }
+
+}
+*/
+

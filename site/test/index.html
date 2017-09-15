@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>test - Test Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "test";
+    var mkdocs_page_input_path = "test.md";
+    var mkdocs_page_url = "/test/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Test Project</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Documents</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">test</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#the-apex-api">The Apex API</a></li>
+                
+                    <li><a class="toctree-l4" href="#resources">Resources</a></li>
+                
+                    <li><a class="toctree-l4" href="#types">Types</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../apex_reserved_swaggerui/">Swagger UI</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Foo xxx</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Foo_1/">Foo 1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Foo_3/">Foo 3</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Other links</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../copyright/">Copyright</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Test Project</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Documents &raquo;</li>
+        
+      
+    
+    <li>test</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-apex-api">The Apex API</h1>
+<p>This API has the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>namespace</td>
+<td>com.yahoo.apex.parsec</td>
+</tr>
+<tr>
+<td>version</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resources">Resources</h2>
+<h3 id="projectresponse"><a href="#ProjectResponse">ProjectResponse</a></h3>
+<h4 id="post-projects">POST /projects/</h4>
+<h4 id="request-parameters">Request parameters:</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Source</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>creationRequest</td>
+<td><a href="#projectrequest">ProjectRequest</a></td>
+<td>body</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wssid</td>
+<td>String</td>
+<td>header: X-YahooWSSID-Authorization</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses">Responses:</h4>
+<p>Expected:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>202 Accepted</td>
+<td><a href="#projectresponse">ProjectResponse</a></td>
+</tr>
+</tbody>
+</table>
+<p>Exception:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>409 Conflict</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>500 Internal Server Error</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="put-projectsid">PUT /projects/{id}</h4>
+<h4 id="request-parameters_1">Request parameters:</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Source</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>UUID</td>
+<td>path</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>project</td>
+<td><a href="#projectrequest">ProjectRequest</a></td>
+<td>body</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wssid</td>
+<td>String</td>
+<td>header: X-YahooWSSID-Authorization</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses_1">Responses:</h4>
+<p>Expected:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 OK</td>
+<td>ProjectResponse</td>
+</tr>
+</tbody>
+</table>
+<p>Exception:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>409 Conflict</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>500 Internal Server Error</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="get-projectsid">GET /projects/{id}</h4>
+<h4 id="request-parameters_2">Request parameters:</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Source</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>UUID</td>
+<td>path</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses_2">Responses:</h4>
+<p>Expected:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 OK</td>
+<td>ProjectResponse</td>
+</tr>
+</tbody>
+</table>
+<p>Exception:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>500 Internal Server Error</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nullresponse"><a href="#NullResponse">NullResponse</a></h3>
+<h4 id="post-oauthtokens">POST /oAuthTokens</h4>
+<h4 id="request-parameters_3">Request parameters:</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Source</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oAuthData</td>
+<td><a href="#oauthdata">OAuthData</a></td>
+<td>body</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wssid</td>
+<td>String</td>
+<td>header: X-YahooWSSID-Authorization</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses_3">Responses:</h4>
+<p>Expected:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>204 No Content</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Exception:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Type</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+<tr>
+<td>500 Internal Server Error</td>
+<td>ResourceError</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<h3 id="datetime"><a name="DateTime"></a> DateTime</h3>
+<p>e.g.2013-03-06T11:00:00Z</p>
+<p><code>DateTime</code> is an alias of type <code>String</code></p>
+<h3 id="projectrequest"><a name="ProjectRequest"></a> ProjectRequest</h3>
+<p><code>ProjectRequest</code> is a <code>Struct</code> type with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Options</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repoUrl</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>custodian</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projectresponse_1"><a name="ProjectResponse"></a> ProjectResponse</h3>
+<p><code>ProjectResponse</code> is a <code>Struct</code> type with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Options</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>UUID</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>repoUrl</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>custodian</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>repo_update_time</td>
+<td><a href="#datetime">DateTime</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>repo_head_sha</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>doc_generated_time</td>
+<td><a href="#datetime">DateTime</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>doc_url</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>review_url</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>splunk_dashboard_url</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>test_host_url</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="oauthdata"><a name="OAuthData"></a> OAuthData</h3>
+<p><code>OAuthData</code> is a <code>Struct</code> type with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Options</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nullresponse_1"><a name="NullResponse"></a> NullResponse</h3>
+<p><code>NullResponse</code> is a <code>Struct</code> with no specified fields</p>
+<p><a href="https://git.corp.yahoo.com/pages/ApexTest/Swagger-UI/parsec/swagger-ui/?url=https://git.corp.yahoo.com/pages/ApexTest/project_1504853232033/swagger-json/test_swagger.json">Swagger URL</a></p>
+              
+            </div>
+          </div>
+          <!--
+custom blank footer
+-->
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../apex_reserved_swaggerui/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
